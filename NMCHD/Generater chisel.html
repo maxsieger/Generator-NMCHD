@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Генератор</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul class="header-list">
+                <li><b><a class="header_link" href="Index.html">Генератор да/нет</a></b></li> 
+                <li><b><a class="header_link" href="Generater pasword.html">Генератор поролей</a></b></li>
+                <li><b><a class="header_link" href="Generater chisel.html">Генератор чисел</a></b></li>
+                <li><b><a class="header_link">Генератор ников</a></b></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="main_section">
+            <h1 align="center">Генератор чисел</h1>
+            <label class="lbl">число от</label>
+            <input type="text" id="min" value="1" class="inp">
+            <label class="lbl">число до</label>
+            <input type="text" id="max" value="1" class="inp">
+            <div class="otvet"><b id="result"></b></div>
+            <button id="generate" class="btn">Сгенерировать</button>
+            <footer>
+                <div class="hr"><br>
+                <div class="footer_text">
+                    <p>2 создателя Newmax и Chardam</p>
+                    <p>почта проекта: newmaxit@bk.ru</p>
+                </div>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
+
+<script>
+    window.onload = function() {
+    var generateButton = document.getElementById('generate');
+    generateButton.addEventListener('click', generateRandomNumber);
+    };
+    
+    function generateRandomNumber() {
+    var min = document.getElementById('min').value, 
+        max = document.getElementById('max').value;
+    var rand = min - 0.5 + Math.random()*(max - min+1)
+    rand = Math.round(rand);
+    document.getElementById('result').innerHTML = rand;
+    }
+    
+    
+    </script>

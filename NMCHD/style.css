@@ -1,0 +1,140 @@
+body {
+    background-color: #007B25;
+}
+
+.container {
+    background-color: #009f2a;
+    height: 40px;
+    border-radius: 10px;
+    opacity: 800%;
+}
+.header-list {
+    font-style: poppins;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-link {
+    color: rgb(203, 203, 203);
+}
+
+.header-link::after {
+    color: rgb(255, 255, 255);
+}
+
+.main_section {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    flex-direction: column;
+}
+
+h1 {
+    opacity: 85%;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.inp {
+    display: flex;
+    border-width: 2px;
+    border-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 30px;
+    background-color: #008e2b;
+    margin-bottom: 50px;
+    font-style: poppins;
+    color: white;
+}
+
+.otvet {
+    display: flex;
+    justify-content: center;
+    font-style: Poppins;
+    color: white;
+    margin-bottom: 10px;
+    font-family: poppins;
+    font-size: 30px;
+}
+
+.btn {
+    display: flex;
+    margin: 0 auto;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 10px;
+    height: 40px;
+    max-width: 140px;
+    background-color: #00a933;
+    font-style: poppins;
+    text-decoration: white;
+    font-size: 12px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 90px;
+}
+
+.btn:active {
+    background-color: #00d03e;
+}
+
+.lbl {
+    display: flex;
+    justify-content: center;
+    font-style: Poppins;
+    color: white;
+    margin-bottom: 10px;
+    font-family: poppins;
+    font-size: 20px;
+}
+
+.custom-select {
+    display: flex;
+    border-width: 2px;
+    border-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 30px;
+    background-color: #008e2b;
+    margin-bottom: 30px;
+    font-style: poppins;
+    color: white;
+}
+
+#min {
+    margin-bottom: 20px;
+}
+
+#max {
+    margin-bottom: 20px;
+}
+
+.hr {
+    height: 3px;
+    max-width: 10000px;
+    background-color: #009f2a;
+    margin-bottom: 10px;
+}
+
+
+.footer_text {
+    font-style: poppins;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    opacity: 70%;
+    margin-bottom: 50px;
+}
+
+p {
+    margin-bottom: 10px;
+}

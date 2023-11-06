@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Генератор</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul class="header-list">
+                <li><b><a class="header_link" href="Index.html">Генератор да/нет</a></b></li> 
+                <li><b><a class="header_link" href="Generater pasword.html">Генератор паролей</a></b></li>
+                <li><b><a class="header_link" href="Generater chisel.html">Генератор чисел</a></b></li>
+                <li><b><a class="header_link">Генератор ников</a></b></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="main_section">
+            <h1 align="center">Генератор ответов</h1>
+            <div class="otvet" id="response"></div>
+            <input class="inp" type="text" placeholder="Напиши вопрос">
+            <button class="btn" onclick="generateResponse()">Генерировать</button>
+            <footer>
+                <div class="hr"><br>
+                <div class="footer_text">
+                    <p>2 создателя Newmax и Chardam</p>
+                    <p>почта проекта: newmaxit@bk.ru</p>
+                </div>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
+
+<script>
+    function generateResponse() {
+                const responses = ["ДА", "НЕТ"];
+                const randomIndex = Math.floor(Math.random() * responses.length);
+                const randomResponse = responses[randomIndex];
+                document.getElementById("response").textContent = randomResponse;
+            }
+    </script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Генератор</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul class="header-list">
+                <li><b><a class="header_link" href="Index.html">Генератор да/нет</a></b></li> 
+                <li><b><a class="header_link" href="Generater pasword.html">Генератор поролей</a></b></li>
+                <li><b><a class="header_link" href="Generater chisel.html">Генератор чисел</a></b></li>
+                <li><b><a class="header_link">Генератор ников</a></b></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="main_section">
+            <h1 align="center">Генератор паролей</h1>
+            <div id="password-generator">
+                <label for="length" id="lbl_2" class="lbl">Длина пороля:</label>
+                <select id="length" class="custom-select">
+                    <option value="15">15</option>
+                    <option value="14">14</option>
+                    <option value="13">13</option>
+                    <option value="12">12</option>
+                    <option value="11">11</option>
+                    <option value="10">10</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+                <input class="inp" type="text" id="password" readonly>
+                <button onclick="generatePassword()" class="btn">Сгенерировать</button><br><br>
+                <footer>
+                    <div class="hr"><br>
+                    <div class="footer_text">
+                        <p>2 создателя Newmax и Chardam</p>
+                        <p>почта проекта: newmaxit@bk.ru</p>
+                    </div>
+                </footer>
+        </section>
+    </main>
+</body>
+</html>
+
+<script>
+    function generatePassword() {
+    var length = document.getElementById('length').value;; // Длина пароля
+    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // Доступные символы для пароля
+    var password = "";
+
+    for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset[randomIndex];
+    }
+
+    document.getElementById("password").value = password;
+}
+</script>
